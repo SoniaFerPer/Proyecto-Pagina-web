@@ -1,0 +1,54 @@
+services:
+
+  mysql:
+    image: mysql:8.0
+    container_name: proyecto8
+    restart: always
+
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: dnd_app
+      MYSQL_USER: root
+      LANG: C.UTF-8
+   
+    command:
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_spanish_ci
+
+    ports:
+      - "33060:3306"
+
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin_dnd
+    restart: always
+
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+
+    ports:
+      - "8080:80"
+
+    depends_on:
+      - mysql
+
+  java_app:
+    build: .
+
+    container_name: java_dnd
+    restart: always
+
+    depends_on:
+      - mysql
+
+    environment:
+      DB_URL: jdbc:mysql://mysql:3306/dnd_app?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+      DB_USER: dnd_user
+      DB_PASSWORD: dnd_pass
+
+volumes:
+  mysql_data:

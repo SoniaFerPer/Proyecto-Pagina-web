@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sonia Fernández Pérez"/>
+    <title>Paws & Claws - Adopciones</title>
+    <meta name="description" content="Web para amantes de los perros y gatos">
+    <meta name="keywords" content="html,perro, gato, Claws, Paws ">
+    <link rel="icon" href="../Images/logo2.png" type="png">
+    <link rel="stylesheet" href="../CSS/formulario.css">
+</head>
+
+<body>
+    <!-- Cabecera de la web -->
+    <header>
+        <picture id="logo">
+            <img src="../Images/logo2.png" alt="Paws & Claws" width="280" />
+        </picture>
+        <div class="titulo">Paws & Claws</div>
+        <nav class="seccion">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li class="desplegar">
+                    <a href="./historia.html">Historia</a>
+                    <ul class="menu-desplegable">
+                        <li><a href="./historia-perro.html">Historia perro</a></li>
+                        <li><a href="./historia-gato.html">Historia gato</a></li>
+                    </ul>
+                </li>
+                <li><a href="./protectoras.html">Protectoras</a></li>
+                <li><a href="./galeria.html">Galería</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección adopcion -->
+    <main>
+        <section class="formulario">
+            <h2>¡Adopta un Amigo Peludo!</h2>
+            <p>Conecta con protectoras y encuentra a tu nuevo mejor amigo. Cada adopción es una historia de amor.</p><br>
+                <form action="#" method="post">
+                <h4>Tus datos:</h4>
+                    <label>Tu nombre*</label>
+                    <input type="text" name="nombre" placeholder="nombre" required>
+                    
+                    <label>Apellidos*</label>
+                    <input type="text" name="apellidos" placeholder="apellidos" required>
+                    
+                    <label>Correo electrónico*</label>
+                    <input type="email" name="correo" placeholder="example@someone.es" required>
+                    
+                    <label>Teléfono*</label>
+                    <input type="tel" name="telefono" placeholder="634-656-456" required>
+                    
+                    <label>DNI*</label>
+                    <input type="text" name="dni" placeholder="26234567-J" required>
+                    
+                    <label>Fecha de nacimiento*</label>
+                    <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" min="2006-03-09" required>
+                    
+                    <label>Dirección*</label>
+                    <input type="text" name="direccion" placeholder="Ingrese su dirección" required>
+        
+                    <label>Población*</label>
+                    <input type="text" name="poblacion" placeholder="Ingrese su población" required>
+        
+                    
+                    <h4>Formulario de Reserva para Adopción de uno de nuestros amiguitos</h4>
+                    <label>Nombre y número de la mascota</label>
+                    <input type="text" name="mascota">
+                    
+                    <label>¿En qué se fija a la hora de elegir una mascota?</label>
+                    <select name="criterio">
+                        <option value="fisicas">Características físicas</option>
+                        <option value="caracter">Carácter</option>
+                        <option value="edad">Edad</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                    
+                    <label>¿Por qué le interesa adoptar una mascota?</label>
+                    <select name="motivo">
+                        <option value="compania">Compañía</option>
+                        <option value="cria">Cría</option>
+                        <option value="caza">Caza</option>
+                        <option value="guarda">Guarda</option>
+                        <option value="terapia">Terapia</option>
+                        <option value="venta">Venta</option>
+                        <option value="regalo">Regalo</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                    
+                    <label>¿Para quién sería?</label>
+                    <select name="destinatario">
+                        <option value="adulto">Adulto/a</option>
+                        <option value="nino">Niño/a</option>
+                        <option value="mayor">Persona mayor</option>
+                        <option value="discapacidad">Persona con discapacidad</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                    
+                    <label>¿Todos los miembros del hogar están dispuestos a adoptar el perro?</label>
+                    <select name="acuerdo">
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                    
+                    <label>¿Dónde dormiría y pasaría la mayor parte del tiempo la mascota?</label>
+                    <select name="lugar">
+                        <option value="interior">En su camita en el interior</option>
+                        <option value="habitacion">En la habitación del dueño</option>
+                        <option value="pasillo">En el pasillo</option>
+                        <option value="exterior">En una casita en el exterior</option>
+                        <option value="jaula">En una jaula</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                    
+                    <label>¿Anteriormente ha tenido mascota? <br>
+                        <input type="checkbox" name="historial" value="adoptado"> Adoptado <br>
+                        <input type="checkbox" name="historial" value="comprado"> Comprado <br>
+                        <input type="checkbox" name="historial" value="regalado"> Regalado <br>
+                    </label>
+
+                    <label>¿De que tipo? <br>
+                        <input type="checkbox" name="tipo" value="gato"> Gato <br>
+                        <input type="checkbox" name="tipo" value="perro"> Perro <br>
+                        <input type="checkbox" name="tipo" value="hurón"> hurón <br>
+                        <input type="checkbox" name="tipo" value="otros"> otros <br>
+                    </label>
+
+
+                    <label>Motivo de fallecimiento (si aplica)</label>
+                    <input type="text" name="motivo_fallecimiento">
+                    
+                    <label>¿Actualmente tiene animales en casa?</label>
+                    <select name="tiene_animales">
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                    
+                    <label>¿Cuánto tiempo pasaría el perro solo en casa?</label>
+                    <select name="tiempo_solo">
+                        <option value="nada">Nada</option>
+                        <option value="1_3">Entre 1 y 3 horas</option>
+                        <option value="3_6">Entre 3 y 6 horas</option>
+                        <option value="6+">Más de 6 horas</option>
+                    </select>
+                    
+                    <label>¿Ha pensado qué hará con su perro en vacaciones?</label>
+                    <textarea name="vacaciones" cols="20" rows="10" maxlength="500"></textarea>
+
+                    <h4>Preferencias de Mascota</h4>
+                    <label>Género*</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="genero" value="Hembra" required> Hembra</label>
+                            <label><input type="radio" name="genero" value="Macho" required> Macho</label>
+                        </div>
+                        
+                    <label>Edad*</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="edad_mascota" value="Cachorro" required> Cachorro (-12 meses)</label>
+                            <label><input type="radio" name="edad_mascota" value="Adulto" required> Adulto (1 a 10 años)</label>
+                            <label><input type="radio" name="edad_mascota" value="Mayor" required> Mayor (+10 años)</label>
+                            <label><input type="radio" name="edad_mascota" value="Otra" required> Otra</label>
+                        </div>
+                        
+                    <label>Tamaño*</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="tamano" value="Mini" required> Mini (hasta 5 kg)</label> 
+                            <label><input type="radio" name="tamano" value="Pequeño" required> Pequeño (6 a 12 kg)</label>
+                            <label><input type="radio" name="tamano" value="Mediano" required> Mediano (13 a 25 kg)</label>
+                            <label><input type="radio" name="tamano" value="Grande" required> Grande (+25 kg)</label>
+                            <label><input type="radio" name="tamano" value="Otra" required> Otra</label>
+                        </div>
+        
+                    <label>Raza/Cruce</label>
+                        <input type="text" name="raza" placeholder="Ingrese la raza o cruce preferido">
+                    
+                    <label><a href="#">Acepte nuestra política de privacidad *</a>
+                        <input type="checkbox" name="privacidad" required>
+                    </label>
+                    <label><a href="">Consiente que se registren sus datos en nuestra base *</a>
+                        <input type="checkbox" name="consentimiento" required>
+                    </label>
+                    <button type="submit">Enviar Solicitud</button>
+                </form>
+        </section>
+    </main>
+
+    <!--seccion indice-->
+    <div class="indice">
+        <a href="#logo">Ir arriba</a> | <a href="../index.html">Inicio</a>
+    </div>
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2025 Paws & Claws - Todos los derechos reservados</p>
+        <P>Diseño por Sonia Fernández</P>
+        <div class="redes-sociales">
+            <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+            <p>pawsandclaws@gmail.com | +34 123 456 789 | Calle Amistad 45, Linares, Jáen, España</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

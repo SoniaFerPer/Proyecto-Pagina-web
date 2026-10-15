@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+/*toda la pagina*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*texto general y cuerpo*/
+body {
+    font-family:'Poiret One', Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 1.6; /*espacio entre lineas*/
+    background: #ffffff;
+    color: #333;
+}
+
+/* Cabecera */
+header {
+    background: #333;
+    background-image: url(../Images/foto-cabecera.webp);
+    background-size: 800px;
+    color: white;
+    display: flex; /*organiza los elementos en una fila*/
+    flex-wrap: wrap; /*los elementos bajan si no caben en una fila*/
+    justify-content: center; /*centramos el nav*/
+    
+}    
+/*logo*/
+#logo{
+    position: relative;
+    padding: 10px 50px 10px 50px;  
+
+}
+
+.titulo {
+    font-size: 8.5em;
+    color:#333;
+    flex-wrap: wrap; /*los elementos bajan si no caben en una fila*/
+    justify-content: center;
+    align-content: center;
+    margin-top: -30px;
+    font-family:"Fredericka the Great";
+    text-shadow: -6px -6px 0 #ffa600;
+}
+  
+nav ul {
+    list-style: none;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    column-gap: 1.5em; /*separacion entre botones*/
+    font-family: "Poiret One";
+    font-weight: bold; /*en negrita*/
+    font-size:x-large;
+    margin-bottom: -35px; /*altura de los botones con referencia al header*/
+    margin-left: 50px;
+
+}
+nav ul li {
+    position: relative;
+}
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.3em;
+    display: inline-block;
+    padding: 5px 30px;
+    font-weight: bold; /*en negrita*/
+    color: white;
+    background-color: #e02d72;
+    border-radius: 8px;
+    cursor:url('../Images/puntero.png'),pointer; /*puntero de huellas*/
+    transition: transform 0.3s ease, background-color 0.3s ease; /*para que la animacion entre el hover sea suave*/
+    
+}
+
+nav ul li a:hover {
+    transform: scale(1.1); /* Se agranda un 10% */
+    background-color: #2e3c61; /* Nuevo color al pasar el mouse */
+  
+}
+
+/*desplegar la historia de los animales*/
+nav ul li a:hover {
+    transform: scale(1.1); /* Se agranda un 10% */
+    background-color: #2e3c61; /* Nuevo color al pasar el mouse */
+  
+}
+
+/*desplegar la historia de los animales*/
+.menu-desplegable {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #e02d72;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: none; /*no se muestra hasta que pasemos el cursor*/
+    border-radius: 8px;
+    width: 200px;
+    z-index: 1000;
+}
+.menu-desplegable li {
+    width: 100%;
+}
+.menu-desplegable li a {
+    display: block;
+    padding: 5px;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    background: #e02d72;
+    border-radius: 8px;
+    
+}
+.menu-desplegable li a:hover {
+    background: #2e3c61; 
+}
+
+.desplegar:hover .menu-desplegable{
+    display: block;
+}
+
+/* Sección principal */
+main{
+    font-weight:bold; /*en negrita*/
+}
+.presentacion {
+    text-align: center; /*texto centrado*/
+    font-size: 2em;
+    padding: 60px 20px 20px 20px ;
+    background: #ffffff;
+}
+
+.presentacion h1 {
+    font-size: 1.4em;
+    color: #ff5722;
+}
+
+.presentacion p {
+    margin: 10px 0;
+    font-weight: bold; /*en negrita*/
+    font-size: 0.7em;
+}
+
+.presentacion a { /*boton que lleva al formulario*/
+    display: inline-block;
+    margin-top: 10px;
+    font-family: "Poiret One";
+    padding: 10px 30px;
+    background: #ff5722;
+    color: white;
+    font-weight: bold; /*en negrita*/
+    text-decoration: none;
+    font-size: 0.8em;
+    border-color: #2e3c61;
+    border-radius: 8px;
+    cursor:url('../Images/puntero.png'),pointer; /*puntero de huellas*/
+    transition: background 0.3s;
+}
+
+.presentacion a:hover { /*se muestra al pasar el cursor*/
+    transform: scale(1.1);
+    background: #2e3c61;
+
+}
+
+/*indice*/
+.indice {
+    text-align: left; 
+    font-size: 1.6em;
+    padding: 0px 0px 15px 20px;
+    background: #ffffff;
+    font-weight:bold; /*en negrita*/
+}
+.indice a{
+    color: #2e3c61;
+}
+.indice a:hover{
+    color: #e64a19;
+}
+
+/* Pie de página */
+footer {
+    font-size: 1.4em;
+    text-align: center;
+    padding: 20px 0px;
+    background: #333;
+    color: white;
+}
+
+.redes-sociales a {
+    color: #ff8c42;
+    text-decoration: none;
+    margin: 25px 15px;
+    transition: color 0.3s;
+}
+
+.redes-sociales a:hover {
+    color: #2e3c61;
+}
